@@ -421,8 +421,9 @@
 	[image unlockFocus];
 	
 	NSCursor * theCursor = [[NSCursor alloc] initWithImage:image hotSpot:NSMakePoint(s/2.0, s/2.0)];
-	
-	return theCursor;
+	[image release];
+    
+	return [theCursor autorelease];
 }
 
 
