@@ -410,7 +410,10 @@
 	NSImage * image = [[NSImage alloc] initWithSize:NSMakeSize(s, s)];
 	[image lockFocus];
 	if (underlay) {
-		[underlay compositeToPoint:NSMakePoint(s/2.0 - underlay.size.width / 2.0 + 0.65, s/2.0 - underlay.size.height/2.0 + 0.65) operation:NSCompositeCopy];
+		[underlay drawAtPoint:NSMakePoint(s/2.0 - underlay.size.width / 2.0 + 0.65, s/2.0 - underlay.size.height/2.0 + 0.65)
+                     fromRect:NSZeroRect
+                    operation:NSCompositeCopy
+                     fraction:1.0];
 	}
 	[[NSColor blackColor] set];
 	[bP fill];
