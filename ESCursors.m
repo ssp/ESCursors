@@ -1,10 +1,8 @@
+// ESCursors.h
 //
-//  NSBezierPath+Cursors.m
-//  Symmetries
-//
-//  Created by  Sven on 12.07.08.
-//  Copyright 2008 earthlingsoft. All rights reserved.
-//
+// Copyright 2008 Sven-S. Porst, earthlingsoft: http://earthlingsoft.net/ssp/
+// Some rights reserved: http://opensource.org/licenses/mit
+// Available at: https://github.com/ssp/ESCursors
 
 #import "ESCursors.h"
 
@@ -420,7 +418,6 @@
 	[[NSColor whiteColor] set];
 	bP.lineWidth = 1.0;
 	[bP stroke];
-	// [bP drawPointsAndHandles];
 	[image unlockFocus];
 	
 	NSCursor * theCursor = [[NSCursor alloc] initWithImage:image hotSpot:NSMakePoint(s/2.0, s/2.0)];

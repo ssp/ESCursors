@@ -1,19 +1,11 @@
 /*
  ESCursors.h
  
- v1 (2008-07-27)
- 
- Created by  Sven on 24.05.08.
- Copyright 2008 earthlingsoft. All rights reserved.
- 
- Available at
- http://earthlingsoft.net/code/ESCursors/
- More code at
- http://earthlingsoft.net/code/
- 
- You may use this code in your own projects at your own risk.
- Please notify us of problems you discover. You are required 
- to give reasonable credit when using the code in your projects.
+ Copyright 2008 Sven-S. Porst, earthlingsoft: http://earthlingsoft.net/ssp/
+ Some rights reserved: http://opensource.org/licenses/mit
+ Available at: https://github.com/ssp/ESCursors
+
+ v1 (2008-07-27) Initial release.
  
  ********************************************************************
  
@@ -29,7 +21,6 @@
  which calls a helper method that creates the Bézier path for the
  shape, draws it at the right size in black with a white border,
  rotated and scaled to the desired size and returns it as an NSCursor.
- 
 */
 
 #import <Cocoa/Cocoa.h>
@@ -53,24 +44,25 @@
 */
 
 + (NSBezierPath *) curvedCursorBezierPathWithRightArrow:(BOOL) rightArrow
-												upArrow:(BOOL) upArrow 
-											  leftArrow:(BOOL) leftArrow 
-											  downArrow: (BOOL) downArrow 
-											   forAngle: (CGFloat) angle;
+                                                upArrow:(BOOL) upArrow
+                                              leftArrow:(BOOL) leftArrow
+                                              downArrow:(BOOL) downArrow
+                                               forAngle:(CGFloat) angle;
 
 + (NSCursor *) curvedCursorWithRightArrow:(BOOL) rightArrow 
-								  upArrow:(BOOL) upArrow 
-								leftArrow:(BOOL) leftArrow downArrow: (BOOL) downArrow 
-								 forAngle: (CGFloat) angle 
-									 size: (CGFloat) size;
+                                  upArrow:(BOOL) upArrow
+                                leftArrow:(BOOL) leftArrow
+                                downArrow:(BOOL) downArrow
+                                 forAngle:(CGFloat) angle
+                                     size:(CGFloat) size;
 
 + (NSCursor *) curvedCursorWithRightArrow:(BOOL) rightArrow 
-								  upArrow:(BOOL) upArrow 
-								leftArrow:(BOOL) leftArrow 
-								downArrow: (BOOL) downArrow 
-								 forAngle: (CGFloat) angle 
-									 size: (CGFloat) size 
-								 underlay:(NSImage*) underlay;
+                                  upArrow:(BOOL) upArrow
+                                leftArrow:(BOOL) leftArrow
+                                downArrow:(BOOL) downArrow
+                                 forAngle:(CGFloat) angle
+                                     size:(CGFloat) size
+                                 underlay:(NSImage*) underlay;
 
 
 
@@ -111,12 +103,13 @@
  
 	to do the actual drawing.
 */
-+ (NSCursor *) cursorForBezierPath: (NSBezierPath *) path 
-					  withRotation: (CGFloat) angle 
-						   andSize: (CGFloat) size;
++ (NSCursor *) cursorForBezierPath:(NSBezierPath *) path
+                      withRotation:(CGFloat) angle
+                           andSize:(CGFloat) size;
 
-+ (NSCursor *) cursorForBezierPath: (NSBezierPath *) bP 
-					  withRotation: (CGFloat) angle 
-							  size: (CGFloat) size 
-					   andUnderlay:(NSImage *) underlay;
++ (NSCursor *) cursorForBezierPath:(NSBezierPath *) path
+                      withRotation:(CGFloat) angle
+                              size:(CGFloat) size
+                       andUnderlay:(NSImage *) underlay;
+
 @end
