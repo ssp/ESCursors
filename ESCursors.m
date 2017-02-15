@@ -1,7 +1,7 @@
 // ESCursors.h
 //
-// Copyright 2008 Sven-S. Porst, earthlingsoft: http://earthlingsoft.net/ssp/
-// Some rights reserved: http://opensource.org/licenses/mit
+// Copyright 2008-2017 Sven-S. Porst, earthlingsoft: https://earthlingsoft.net/ssp/
+// Some rights reserved: https://opensource.org/licenses/mit
 // Available at: https://github.com/ssp/ESCursors
 
 #import "ESCursors.h"
