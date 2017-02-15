@@ -17,7 +17,7 @@
 
 + (NSBezierPath *) curvedCursorBezierPathWithRightArrow:(BOOL) rightArrow upArrow:(BOOL) upArrow leftArrow:(BOOL) leftArrow downArrow: (BOOL) downArrow forAngle: (CGFloat) angle {
 	const CGFloat handleFraction = 1.0 / 8.0;
-	const CGFloat phi = pi / 20.0;
+	const CGFloat phi = M_PI / 20.0;
 	NSAffineTransform * rotate = [NSAffineTransform transform];
 	[rotate rotateByRadians:-phi];
 	NSAffineTransform * rotate2 = [NSAffineTransform transform];
